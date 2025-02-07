@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "bc9a0e62-5b3f-49a3-b3bf-7238099edaa6",
+		"name": "Sportify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39095284"
+	},
+	"item": [
+		{
+			"name": "Matches",
+			"item": [
+				{
+					"name": "UpcomingRequests",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/matches/9619ed30-a7bc-4ba8-b642-b152d7dedc64?apikey=53675979-14fa-4513-8bca-4439ca1e17d3&id=9619ed30-a7bc-4ba8-b642-b152d7dedc64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"matches",
+								"9619ed30-a7bc-4ba8-b642-b152d7dedc64"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "53675979-14fa-4513-8bca-4439ca1e17d3"
+								},
+								{
+									"key": "id",
+									"value": "9619ed30-a7bc-4ba8-b642-b152d7dedc64"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Series",
+			"item": [
+				{
+					"name": "SeriesInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/series/334da6da-5ce4-4542-8d66-f22352b524bc?apikey=53675979-14fa-4513-8bca-4439ca1e17d3&id=334da6da-5ce4-4542-8d66-f22352b524bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"series",
+								"334da6da-5ce4-4542-8d66-f22352b524bc"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "53675979-14fa-4513-8bca-4439ca1e17d3"
+								},
+								{
+									"key": "id",
+									"value": "334da6da-5ce4-4542-8d66-f22352b524bc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/players/player/d86862b0-775c-44bb-a802-d13f3cf91b9a?apikey=1756fd6e-d0ff-47aa-8268-9df3634501c3&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"players",
+								"player",
+								"d86862b0-775c-44bb-a802-d13f3cf91b9a"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "1756fd6e-d0ff-47aa-8268-9df3634501c3"
+								},
+								{
+									"key": "id",
+									"value": "9619ed30-a7bc-4ba8-b642-b152d7dedc64",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Vinsmoke\",\r\n  \"email\": \"vinsmoke@test.com\",\r\n  \"password\": \"asdf1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"zoro@test.com\",\r\n  \"password\": \"asdf1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FanUser",
+			"item": [
+				{
+					"name": "Unfollow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWYzMmQyMThmODRjODFjYWZhMzEzNyIsImlhdCI6MTczODQ4NjUxNCwiZXhwIjoxNzM4NDkwMTE0fQ.qru6rqmDb885bmiSW7mysZtqLRwFW9iu03FsatHfi4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"playerId\": \"f8bfa0e4-3ba8-44ea-8e55-7525ce7d8ff1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fanuser/unfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanuser",
+								"unfollow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Followed Players",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWYzMmQyMThmODRjODFjYWZhMzEzNyIsImlhdCI6MTczODQ5MDIwNywiZXhwIjoxNzM4NDkzODA3fQ.6fRFZ9kp8WVqrcRJpl2LW2nCsZK9eJzYeRfIpWpzNdM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fanuser/followed-players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanuser",
+								"followed-players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTYzNmM4ZjJkNTFiYTI4ZDcwZGZlNiIsImlhdCI6MTczODk0NjMxNSwiZXhwIjoxNzM4OTQ5OTE1fQ.U9nLQVjRc5WQW4sngMOJQ9XVRUlohaOhFEdq5opbeug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"playerId\": \"58f3b601-bf35-4c36-886c-4526b5c8da86\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fanuser/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanuser",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWYzMmQyMThmODRjODFjYWZhMzEzNyIsImlhdCI6MTczODY4OTU3OSwiZXhwIjoxNzM4NjkzMTc5fQ.DPbxM6DkG93eqYmAUtYvSHcEwIVr8lDVWGdGHERXVs4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"profileImage\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjaNXSWOcMJ5eZObaHXiC3LTRV68IVKnfHiA&s\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fanUser/update-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanUser",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWYzMmQyMThmODRjODFjYWZhMzEzNyIsImlhdCI6MTczODY4OTU3OSwiZXhwIjoxNzM4NjkzMTc5fQ.DPbxM6DkG93eqYmAUtYvSHcEwIVr8lDVWGdGHERXVs4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mediaFile",
+									"type": "file",
+									"src": "/C:/Users/WAQAS/Pictures/Saved Pictures/hinata poster 1.jpg"
+								},
+								{
+									"key": "type",
+									"value": "image",
+									"type": "text"
+								},
+								{
+									"key": "matchId",
+									"value": "3eb860fa-cd72-48da-9fa2-67990004c474",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fanUser/upload-media",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanUser",
+								"upload-media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTYzNmM4ZjJkNTFiYTI4ZDcwZGZlNiIsImlhdCI6MTczODk0NjMxNSwiZXhwIjoxNzM4OTQ5OTE1fQ.U9nLQVjRc5WQW4sngMOJQ9XVRUlohaOhFEdq5opbeug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fanUser/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanUser",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "Authorization ",
+									"value": "bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWNmYzk1ODllZjliN2JiZDRjNTgyMyIsInJvbGUiOiJmYW4iLCJpYXQiOjE3MzgzNDE2MTQsImV4cCI6MTczODM0NTIxNH0.tTeyiB0-4FZEj9CV5rKj8NTfqphRjMtQHk5a-BM332g",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMedia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWYzMmQyMThmODRjODFjYWZhMzEzNyIsImlhdCI6MTczODY4OTU3OSwiZXhwIjoxNzM4NjkzMTc5fQ.DPbxM6DkG93eqYmAUtYvSHcEwIVr8lDVWGdGHERXVs4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fanUser/get-uploaded-media",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fanUser",
+								"get-uploaded-media"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@sportify.com\",\r\n  \"password\": \"marimo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWQwNzBmZTg3ODgwOTllMjAxZWI0MyIsImlhdCI6MTczODk0NjEwMywiZXhwIjoxNzM4OTQ5NzAzfQ.cNWnGvcd7GjIxQNmKSQsdIDJsa5IK74GJtM2f0GR0SI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWQwNzBmZTg3ODgwOTllMjAxZWI0MyIsImlhdCI6MTczODk0NjEwMywiZXhwIjoxNzM4OTQ5NzAzfQ.cNWnGvcd7GjIxQNmKSQsdIDJsa5IK74GJtM2f0GR0SI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWQwNzBmZTg3ODgwOTllMjAxZWI0MyIsImlhdCI6MTczODk0NjEwMywiZXhwIjoxNzM4OTQ5NzAzfQ.cNWnGvcd7GjIxQNmKSQsdIDJsa5IK74GJtM2f0GR0SI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"robin@test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/679f32d218f84c81cafa3137",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"679f32d218f84c81cafa3137"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUseByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWQwNzBmZTg3ODgwOTllMjAxZWI0MyIsImlhdCI6MTczODk0NjEwMywiZXhwIjoxNzM4OTQ5NzAzfQ.cNWnGvcd7GjIxQNmKSQsdIDJsa5IK74GJtM2f0GR0SI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/679f32d218f84c81cafa3137",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"679f32d218f84c81cafa3137"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
